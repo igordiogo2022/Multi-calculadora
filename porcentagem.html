@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/porcentagem.css">
+    <title>Porcentagem</title>
+</head>
+<body>
+    <div id="opcoes">
+        <div class="divOpcao">
+            <p>Quanto é <input type="number" class="entrada" id="porcentagemPorcao">% de <input type="number" class="entrada" id="valorTotalPorcao"></p>
+            <div><button onclick="porcentagem('porcao','#porcentagemPorcao','#valorTotalPorcao','#resultadoPorcao')">Calcular</button><p id="resultadoPorcao"></p></div>
+        </div>
+
+        <div class="divOpcao">
+            <p>Qual a porcentagem de <input type="number" class="entrada" id="porcentagemPorcentagem"> em <input type="number" class="entrada" id="valorTotalPorcentagem"></p>
+           <div><button onclick="porcentagem('porcentagem','#porcentagemPorcentagem','#valorTotalPorcentagem','#resultadoPorcentagem')">Calcular</button><p id="resultadoPorcentagem"></p></div>
+        </div>
+
+        <div class="divOpcao">
+            <p>Aumentar <input type="number" class="entrada" id="porcentagemAumento">% de <input type="number" class="entrada" id="valorTotalAumento"></p>
+           <div><button onclick="porcentagem('aumento','#porcentagemAumento','#valorTotalAumento','#resultadoAumento')">Calcular</button><p id="resultadoAumento"></p></div>
+        </div>
+
+        <div class="divOpcao">
+            <p>Descontar <input type="number" class="entrada" id="porcentagemDesconto">% de <input type="number" class="entrada" id="valorTotalDesconto"></p>
+           <div><button onclick="porcentagem('desconto','#porcentagemDesconto','#valorTotalDesconto','#resultadoDesconto')">Calcular</button><p id="resultadoDesconto"></p></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
