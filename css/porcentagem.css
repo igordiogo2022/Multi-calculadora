@@ -18,7 +18,7 @@ body{
 #opcoes{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    row-gap: 20px;
     font-size: 20px;
 }
 .entrada{
@@ -43,11 +43,29 @@ body{
     background-color: var(--cor3);
     border-radius: 5px;
     padding: 5%;
-    width: 100%;
+    width: 90%;
 }
 .divOpcao div{
     display: flex;
     gap: 25%;
     text-align: center;
     align-items: center;
+}
+@media (max-width: 500px) {
+    body{
+        padding: 5%;
+    }
+    #opcoes{
+        width: 100%;
+        font-size: 15px;
+    }
+    #opcoes button{
+        font-size: 15px;
+    }
+    .entrada{
+        width: 50px;
+        height: 18px;
+    }
+    .divOpcao{
+    }
 }

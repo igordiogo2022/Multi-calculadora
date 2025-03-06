@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mmc_mdc.css">
+    <title>MMC e MDC</title>
+</head>
+<body>
+    <p>Digite abaixo os valores que voce deseja calcular:</p>
+    <input type="text" id="inputValores" placeholder="Ex: 10,20,25" >
+    <div id="divBotoes">    
+        <button class="botao" onclick="mmc_mdc('mmc','#inputValores','#textoResultado')">MMC</button>
+        <button class="botao">MDC</button>
+    </div>
+    <p id="textoResultado"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>

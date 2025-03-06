@@ -42,3 +42,51 @@ function porcentagem(tipo, valor1Id, valor2Id, resultadoId){
     }
     textoResultado.innerHTML = resultado;
 }
+
+function mmc_mdc(tipo, valoresId, textoResultadoId){
+    var textoResultado = document.querySelector(textoResultadoId)
+    const valores = document.querySelector(valoresId).value .split(',');
+    var resultado =  1;
+    const listaMultiplos = [];
+    
+    if(tipo=='mmc'){
+        var multiplo = 2;
+        var qtdValores = valores.length;
+        var somaValores = 0;
+        var somarMultiplo=true;
+        var multiploNaoFoiAdicionado = true;
+        while(true){   
+            somarMultiplo=true;
+            somaValores=0;
+            multiploNaoFoiAdicionado = true;
+            for(let i=0;i<qtdValores;i++){
+                valor = parseInt(valores[i])
+                somaValores += valor;
+                console.log(valor);
+                console.log(multiplo);
+                if(valor%multiplo==0){
+                    console.log('é divisivel');
+                    if(multiploNaoFoiAdicionado){
+                        listaMultiplos.push(multiplo);
+                        multiploNaoFoiAdicionado=false;
+                    }
+                    valores[i] = valor/multiplo;
+                    somarMultiplo = false;
+                    console.log(valores[i]);
+                }
+            }
+            if(somarMultiplo){
+                multiplo++;
+            }
+            if(somaValores==qtdValores){
+                break;
+            }
+        }
+        console.log(listaMultiplos);
+    }
+    for(const valor of listaMultiplos){
+        resultado = resultado*valor;
+    }
+
+    textoResultado.innerHTML = resultado;
+}

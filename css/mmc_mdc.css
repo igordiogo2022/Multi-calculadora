@@ -9,32 +9,43 @@
 body{
     background-color: var(--cor1);
     padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
-#opcoes{
+p{
+    font-size: 20px;
+}
+#inputValores{
+    width: 200px;
+    height: 20px;
+}
+#divBotoes{
     display: flex;
     gap: 20px;
 }
-.opcao{
+.botao{
     display: flex;
     width: 120px;
-    height: 120px;
+    height: 40px;
     background-color: var(--cor2);
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 5px;
     color: black;
     text-decoration: none;
+    border: 0;
 }
-
 @media (max-width: 500px) {
-    body{
-        padding: 5%;
+    p{
+        font-size: 15px;
     }
-    .opcao{
-        width: 70px;
-        height: 70px;
-        font-size: 12px;
+    .botao{
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
     }
 }
