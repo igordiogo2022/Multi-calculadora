@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/equacao.css">
+    <title>Equação</title>
+</head>
+<body>
+    <section id="valores">
+        <div class="divValor">
+            <label for="valorA">Valor de A</label>
+            <input type="number" name="valorA" id="valorA">
+        </div>
+        <div class="divValor">
+            <label for="valorB">Valor de B</label>
+            <input type="number" name="valorB" id="valorB">
+        </div>
+        <div class="divValor">
+            <label for="valorC">Valor de C</label>
+            <input type="number" name="valorC" id="valorC">
+        </div>
+    </section>
+    <p id="textoResultadoX1"></p>
+    <button id="botao" onclick="equacao('#valorA','#valorB', '#valorC', '#textoResultadoX1')">Calcular</button>
+    <script src="app.js"></script>
+</body>
+</html>

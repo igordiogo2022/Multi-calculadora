@@ -90,3 +90,16 @@ function mmc_mdc(tipo, valoresId, textoResultadoId){
 
     textoResultado.innerHTML = resultado;
 }
+
+function equacao(aId, bId, cId, textoResultadoX1Id){
+    var a = parseInt(document.querySelector(aId).value);   
+    var b = parseInt(document.querySelector(bId).value);   
+    var c = parseInt(document.querySelector(cId).value);   
+    var textoResultadoX1 = document.querySelector(textoResultadoX1Id);
+    
+    var raizDelta = Math.sqrt(b**2-4*a*c);
+    var x1 = ((0-b)+raizDelta)/(2*a);
+    var x2 = ((0-b)-raizDelta)/(2*a);
+    
+    textoResultadoX1.innerHTML = "x1="+x1+" e x2="+x2;
+}
