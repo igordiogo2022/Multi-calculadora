@@ -54,7 +54,7 @@ function porcentagem(tipo, valor1Id, valor2Id, resultadoId){
 }
 
 function mmc_mdc(tipo, valoresId, textoResultadoId){
-    var textoResultado = document.querySelector(textoResultadoId)
+    var textoResultado = document.querySelector(textoResultadoId);
     const valores = document.querySelector(valoresId).value .split(',');
     //resultado é 1, pois vai ser múltiplicado
     var resultado =  1;
@@ -73,6 +73,11 @@ function mmc_mdc(tipo, valoresId, textoResultadoId){
     var vezesMultiplicado = 0;
 
     while(true){   
+        if(valores==''){
+            console.log(valores);
+            resultado = "Valores inválidos";
+            break;
+        }
         vezesMultiplicado=0;
         somarMultiplo=true;
         somaValores=0;
@@ -80,10 +85,7 @@ function mmc_mdc(tipo, valoresId, textoResultadoId){
         for(let i=0;i<qtdValores;i++){
             valor = parseInt(valores[i])
             somaValores += valor;
-            console.log(valor);
-            console.log(multiplo);
             if(valor%multiplo==0){
-                console.log('é divisivel');
                 if(multiploNaoFoiAdicionado && tipo=='mmc'){
                     listaMultiplos.push(multiplo);
                     multiploNaoFoiAdicionado=false;
@@ -93,7 +95,6 @@ function mmc_mdc(tipo, valoresId, textoResultadoId){
                 }
                 valores[i] = valor/multiplo;
                 somarMultiplo = false;
-                console.log(valores[i]);
             }
             if(vezesMultiplicado==qtdValores){
                 listaMultiplos.push(multiplo);
@@ -106,7 +107,6 @@ function mmc_mdc(tipo, valoresId, textoResultadoId){
             break;
         }
     }
-    console.log(listaMultiplos);
 
     //multiplica os múltiplos
     for(const valor of listaMultiplos){

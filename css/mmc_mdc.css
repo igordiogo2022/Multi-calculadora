@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-    --cor1: #4d4d4d;
-    --cor2: #8f0000;
+    --cor1: #1D2121;
+    --cor2: #5D110E;
+    --cor3: #282C2D;
+    --cor4: #E8D8AD;
+    --fonte1: "Poppins", sans-serif;
 }
 * {
     margin: 0;
@@ -16,10 +20,22 @@ body{
 }
 p{
     font-size: 20px;
+    color: var(--cor4);
+    font-family: var(--fonte1);
 }
 #inputValores{
     width: 200px;
     height: 20px;
+    background-color: var(--cor4);
+    font-family: var(--fonte1);
+    border: 0;
+    border-bottom: 1px solid var(--cor4);
+    background-color: var(--cor1);
+    outline: none;
+    color: var(--cor4);
+}
+#inputValores::placeholder{
+    color: var(--cor4);
 }
 #divBotoes{
     display: flex;
@@ -35,7 +51,7 @@ p{
     text-align: center;
     font-size: 20px;
     border-radius: 5px;
-    color: black;
+    color: var(--cor4);
     text-decoration: none;
     border: 0;
 }
